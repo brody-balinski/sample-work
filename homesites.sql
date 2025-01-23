@@ -74,7 +74,6 @@ WITH homesites AS (
             AS state
         -- zip code
         , REGEXP_SUBSTR(SUBSTR(city_address, POSITION(',' IN city_address) + 1), '\\d+$') AS zip_code
-        -- The homesite's status from the most recent prior record
         -- home trait extraction logic
         -- bed. Sometimes (rarely) changes. Assumption is that the most recent value is the most
         -- acurate.
