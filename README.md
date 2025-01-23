@@ -2,7 +2,7 @@
 # Overview
 This repository contains SQL scripts designed to address various analytical and operational challenges I've come across while working. Each script provides detailed solutions for specific use cases, with a focus on flexibility, reusability, and performance.
 
-**Contents**
+# Contents
 ### 1. consecutive_weeks_in_status
    #### &nbsp;&nbsp;&nbsp;&nbsp;Description:
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Calculates the number of consecutive weeks that a healthcare product has maintained a particular inventory status.
