@@ -59,11 +59,11 @@ DISTRIBUTION_CENTER   PRODUCT_ID      REPORT_WEEK     AVAILABILITY_STATUS	HAS_DA
 CENT001               441562         2024-04-29      In Stock				
 CENT001               441562         2024-05-06      In Stock				
 CENT001               441562         2024-05-20      In Stock				1
-CENT001               441562         2024-05-27      Low Stock									1
+CENT001               441562         2024-05-27      Low Stock						1
 CENT001               441562         2024-06-03      Low Stock
-CENT001               441562         2024-06-10      Out of Stock								1
+CENT001               441562         2024-06-10      Out of Stock					1
 CENT001               441562         2024-06-17      Out of Stock
-CENT001               441562         2024-06-24      In Stock									1
+CENT001               441562         2024-06-24      In Stock						1
 */
 
 
@@ -87,16 +87,16 @@ has_date_gap_flag field.) Similarly, availability_status_grp increases whenever 
 by the has_different_status_flag field.)
 
 DISTRIBUTION_CENTER   PRODUCT_ID   REPORT_WEEK     HAS_DATE_   AVAILABILITY_   HAS_DIFFERENT_   WEEK_GRP   AVAILABILITY_
-												   GAP_FLAG	   STATUS			STATUS_FLAG					STATUS_GRP
+						   GAP_FLAG    STATUS	        STATUS_FLAG		   STATUS_GRP
 -------------------------------------------------------------------------------------------------------------------------
 CENT001               441562      2024-04-29                   In Stock                         1          1
 CENT001               441562      2024-05-06                   In Stock                         1          1
 CENT001               441562      2024-05-20      1            In Stock                         2          1
-CENT001               441562      2024-05-27                   Low Stock       1      			2          2
-CENT001               441562      2024-06-03                   Low Stock              			2          2
-CENT001               441562      2024-06-10                   Out of Stock    1      			2          3
-CENT001               441562      2024-06-17                   Out of Stock           			2          3
-CENT001               441562      2024-06-24                   In Stock        1      			2          4
+CENT001               441562      2024-05-27                   Low Stock       1      		2          2
+CENT001               441562      2024-06-03                   Low Stock              		2          2
+CENT001               441562      2024-06-10                   Out of Stock    1      		2          3
+CENT001               441562      2024-06-17                   Out of Stock           		2          3
+CENT001               441562      2024-06-24                   In Stock        1      		2          4
 */
 
 -- Step 3: Assign row numbers by segmenting based on both the availability status grouping and the week grouping.
@@ -116,17 +116,18 @@ SELECT * FROM final;
 
 /*
 Final Output:
-This table shows how the flags, groupings, and consecutive week calculations play out for a sample product.
+This table shows how the flags, groupings, and consecutive week calculations work together to form the consecutive_weeks_in_status
+field.
 
-                        HAS_DATE_                  HAS_DIFFERENT_  AVAILABILITY_    CONSECUTIVE_
-DISTRIBUTION_CENTER   PRODUCT_ID   REPORT_WEEK     GAP_FLAG        STATUS_FLAG      STATUS_GRP     WEEKS_IN_STATUS
--------------------------------------------------------------------------------------------------------------------------
-CENT001               441562      2024-04-29               	       In Stock                        1
-CENT001               441562      2024-05-06           	           In Stock                        2
-CENT001               441562      2024-05-20     	1              In Stock                        1
-CENT001               441562      2024-05-27                       Low Stock        1              1
-CENT001               441562      2024-06-03                       Low Stock                       2
-CENT001               441562      2024-06-10                       Out of Stock     1              1
-CENT001               441562      2024-06-17                       Out of Stock                    2
-CENT001               441562      2024-06-24                       In Stock         1              1
+DISTRIBUTION   PRODUCT_ID   REPORT_WEEK     HAS_DATE_    AVAILABILITY_   HAS_DIFFERENT_   WEEK_GRP   AVAILABILITY_  CONSECUTIVE
+_CENTER					    _GAP_FLAG	 STATUS		 _STATUS_FLAG		     STATUS_GRP	    _WEEKS_IN_STATUS
+------------------------------------------------------------------------------------------------------------------------------------
+CENT001        PROD123      2024-04-29                   In Stock                         1          1		    1
+CENT001        PROD123      2024-05-06                   In Stock                         1          1		    2
+CENT001        PROD123      2024-05-20      1            In Stock                         2          1              1
+CENT001        PROD123      2024-05-27                   Low Stock      1                 2          2	 	    1
+CENT001        PROD123      2024-06-03                   Low Stock                        2          2              2
+CENT001        PROD123      2024-06-10                   Out of Stock   1                 2          3              1
+CENT001        PROD123      2024-06-17                   Out of Stock                     2          3              2
+CENT001        PROD123      2024-06-24                   In Stock       1                 2          4              1
 */
