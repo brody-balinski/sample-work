@@ -10,24 +10,24 @@ then assign all homesites belonging to it with the floor_plan value that first a
 
 Example:
 	homesites table
-	-----------------------------------------------------------
+	--
 	REPORT_DATE		HOMESITE		COMMUNITY		FLOOR_PLAN
-	--				--				--				--
-	2024-01-02		5				ABC				1
-	2024-01-03		5				ABC				2
-	2024-01-04		5				ABC				3
-	2024-01-03		6				ABC				2
-	2024-01-04		6				ABC				3
-	2024-01-04		6				ABC				4
+	----------------------------------------------------------------------------------
+	2024-01-02		5			ABC			1
+	2024-01-03		5			ABC			2
+	2024-01-04		5			ABC			3
+	2024-01-03		6			ABC			2
+	2024-01-04		6			ABC			3
+	2024-01-04		6			ABC			4
 	
 Both homesites in the example above belong to the same community and have floor_plan values "2" and "3" in
 common, indicating to us that they truly belong to the same plan. The progression through floor_plan values
 can be illustrated as follows:
 
 	HOMESITE		FLOOR_PLAN_LIST
-	-------------------------------
-	5				[1, 2, 3]
-	6				[2, 3, 4]
+	----------------------------------------
+	5			[1, 2, 3]
+	6			[2, 3, 4]
 	
 Our objective is to first chain the two lists together to create one comprehensive floor_plan list, then to
 assign the first value in the list to every homesite with a floor_plan value in the comprehensive list:
@@ -38,13 +38,13 @@ assign the first value in the list to every homesite with a floor_plan value in 
 	Revised homesites table records:
 
 	REPORT_DATE		HOMESITE		COMMUNITY		FLOOR_PLAN
-	-----------------------------------------------------------
-	2024-01-02		5				ABC				1
-	2024-01-03		5				ABC				1
-	2024-01-04		5				ABC				1
-	2024-01-03		6				ABC				1
-	2024-01-04		6				ABC				1
-	2024-01-04		6				ABC				1
+	-------------------------------------------------------------------------------------------
+	2024-01-02		5			ABC			1
+	2024-01-03		5			ABC			1
+	2024-01-04		5			ABC			1
+	2024-01-03		6			ABC			1
+	2024-01-04		6			ABC			1
+	2024-01-04		6			ABC			1
 */
 
 WITH homesites AS (
