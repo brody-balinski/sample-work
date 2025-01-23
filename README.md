@@ -13,7 +13,8 @@ This repository contains SQL scripts designed to address various analytical and 
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ideal for monitoring the number of consecutive weeks that something has maintained the same description.
 ### 2. floor_plan_chaining
    #### &nbsp;&nbsp;&nbsp;&nbsp;Description:
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Uses recursive joins to chain together floor plans so that homesites belonging to the same floor plan can be identified as such.
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Uses recursive joins to chain together floor plans so that homesites belonging to the same floor plan<br>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;can be identified as such.
    #### &nbsp;&nbsp;&nbsp;&nbsp;Key Features:
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Provides a mapping table for a homesite's correct floor plan (used in the homesites script)
    #### &nbsp;&nbsp;&nbsp;&nbsp;Use Case:
