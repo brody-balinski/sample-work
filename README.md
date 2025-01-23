@@ -8,7 +8,8 @@ This repository contains SQL scripts designed to address various analytical and 
    #### &nbsp;&nbsp;&nbsp;&nbsp;Key Features:
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tracks status transitions and reporting gaps. Identifies patterns of consistency or change. Outputs consecutive week counts
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;segmented by entity and status group.
-   #### &nbsp;&nbsp;&nbsp;&nbsp;Use Case: Ideal for monitoring the number of consecutive weeks that something has maintained the same description.
+   #### &nbsp;&nbsp;&nbsp;&nbsp;Use Case:
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ideal for monitoring the number of consecutive weeks that something has maintained the same description.
 ### 2. floor_plan_chaining
    #### &nbsp;&nbsp;&nbsp;&nbsp;Description: Uses recursive joins to chain together floor plans so that homesites belonging to the same floor plan can be identified as
    #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;such.
