@@ -20,7 +20,6 @@ WITH homesites AS (
 
 , map_community AS (
     SELECT * FROM ml_map_community
-    {{ ci_limits() }}
 )
 
 , map_plan AS (
