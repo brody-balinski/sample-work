@@ -112,7 +112,8 @@ CENT001               441562      2024-06-24                   In Stock        1
     FROM week_grouping
 )
 
-SELECT * FROM final;
+SELECT * FROM final
+;
 
 /*
 Final Output:
