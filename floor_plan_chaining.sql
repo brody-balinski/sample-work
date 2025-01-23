@@ -48,7 +48,7 @@ assign the first value in the list to every homesite with a floor_plan value in 
 */
 
 WITH homesites AS (
-	SELECT * FROM homesites
+    SELECT * FROM homesites
 )
 
 -- Tells us when each floor_plan first appeared for each homesite_id
