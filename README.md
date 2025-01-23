@@ -7,8 +7,8 @@ This repository contains SQL scripts designed to address various analytical and 
    #### &nbsp;&nbsp;&nbsp;&nbsp;Description:
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Calculates the number of consecutive weeks that a healthcare product has maintained a particular inventory status.
    #### &nbsp;&nbsp;&nbsp;&nbsp;Key Features:
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tracks status transitions and reporting gaps. Identifies patterns of consistency or change..<br>
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Outputs consecutive week counts segmented by entity and status group.
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tracks status transitions and reporting gaps. Identifies patterns of consistency or change.<br>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Outputs consecutive week counts segmented by entity and status group.
    #### &nbsp;&nbsp;&nbsp;&nbsp;Use Case:
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ideal for monitoring the number of consecutive weeks that something has maintained the same description.
 ### 2. floor_plan_chaining
