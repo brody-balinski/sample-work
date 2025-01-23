@@ -1,6 +1,6 @@
 /* 
 Source dataset: A daily webscrape of a competitor's national homesite inventory, offering us insights into sales, pricing
-	behaviors, and geographical availability
+behaviors, and geographical availability
 
 Objectives:
 	1.) Clean the data
