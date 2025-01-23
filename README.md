@@ -10,7 +10,7 @@ This repository contains SQL scripts designed to address various analytical and 
    #### - Description: Uses recursive joins to chain together floor plans so that homesites belonging to the same floor plan can be identified as such.
    #### - Key Features: Provides a mapping table for a homesite's correct floor plan (used in the homesites script)
    #### - Use Case: Useful for any scenario where multiple items may belong to the same descriptor, but that descriptor's value can change over time.
-### 4. homesites
+### 3. homesites
    #### - Description: Focuses on cleaning and transforming webscraped homesites data
    #### - Key Features: Handles complex joins, parsing logic, and window functions of various types.
    #### - Use Case: Logic is typical of that you may see in the earlier layer of a data pipeline; before aggregation occurs.
