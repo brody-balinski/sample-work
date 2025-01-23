@@ -58,7 +58,7 @@ DISTRIBUTION_CENTER   PRODUCT_ID      REPORT_WEEK     AVAILABILITY_STATUS	HAS_DA
 -------------------------------------------------------------------------------------------------------------------------
 CENT001               441562         2024-04-29      In Stock				
 CENT001               441562         2024-05-06      In Stock				
-CENT001               441562         2024-05-20      In Stock				1
+CENT001               441562         2024-05-20      In Stock			1
 CENT001               441562         2024-05-27      Low Stock						1
 CENT001               441562         2024-06-03      Low Stock
 CENT001               441562         2024-06-10      Out of Stock					1
@@ -91,7 +91,7 @@ DISTRIBUTION_CENTER   PRODUCT_ID   REPORT_WEEK     HAS_DATE_   AVAILABILITY_   H
 -------------------------------------------------------------------------------------------------------------------------
 CENT001               441562      2024-04-29                   In Stock                         1          1
 CENT001               441562      2024-05-06                   In Stock                         1          1
-CENT001               441562      2024-05-20      1            In Stock                         2          1
+CENT001               441562      2024-05-20       1           In Stock                         2          1
 CENT001               441562      2024-05-27                   Low Stock       1      		2          2
 CENT001               441562      2024-06-03                   Low Stock              		2          2
 CENT001               441562      2024-06-10                   Out of Stock    1      		2          3
