@@ -19,7 +19,7 @@ WITH homesites AS (
 )
 
 , map_community AS (
-    SELECT * FROM {{ ref('ml_map_community') }}
+    SELECT * FROM ml_map_community
     {{ ci_limits() }}
 )
 
