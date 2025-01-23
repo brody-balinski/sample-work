@@ -322,3 +322,4 @@ WITH homesites AS (
 )
 
 SELECT * FROM final
+;
