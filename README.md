@@ -19,6 +19,9 @@ This repository contains SQL scripts designed to address various analytical and 
    #### &nbsp;&nbsp;&nbsp;&nbsp;Use Case:
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Useful for any scenario where multiple items may belong to the same descriptor, but that descriptor's value can change over time.
 ### 3. homesites
-   #### &nbsp;&nbsp;&nbsp;&nbsp;Description: Focuses on cleaning and transforming webscraped homesites data
-   #### &nbsp;&nbsp;&nbsp;&nbsp;Key Features: Handles complex joins, parsing logic, and window functions of various types.
-   #### &nbsp;&nbsp;&nbsp;&nbsp;Use Case: Logic is typical of that you may see in the earlier layer of a data pipeline; before aggregation occurs.
+   #### &nbsp;&nbsp;&nbsp;&nbsp;Description:
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Focuses on cleaning and transforming webscraped homesites data
+   #### &nbsp;&nbsp;&nbsp;&nbsp;Key Features:
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Handles complex joins, parsing logic, and window functions of various types.
+   #### &nbsp;&nbsp;&nbsp;&nbsp;Use Case:
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Logic is typical of that you may see in the earlier layer of a data pipeline; before aggregation occurs.
