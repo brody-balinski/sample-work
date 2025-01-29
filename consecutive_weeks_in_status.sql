@@ -31,17 +31,17 @@ WITH inventory AS (
 -- different from the previous record or if the preceding record doesn't belong to the immediate previous week, we flag it.
 , window_weeks AS (
     SELECT 
-        *,
-        LAG(report_week) OVER (
+        *
+        , LAG(report_week) OVER (
             PARTITION BY distribution_center, product_id ORDER BY report_week
-        ) AS previous_report_week,
-        LAG(availability_status) OVER (
+        ) AS previous_report_week
+        , LAG(availability_status) OVER (
             PARTITION BY distribution_center, product_id ORDER BY report_week
-        ) AS previous_availability_status,
-        CASE 
+        ) AS previous_availability_status
+        , CASE 
             WHEN report_week != DATEADD('week', 1, previous_report_week) THEN 1 
-        END AS has_date_gap_flag,
-        CASE 
+        END AS has_date_gap_flag
+        , CASE 
             WHEN availability_status != previous_availability_status THEN 1 
         END AS has_different_status_flag
     FROM inventory
@@ -71,11 +71,11 @@ CENT001               441562         2024-06-24      In Stock						1
 -- availability_status_grp sums the has_different_status_flag, increasing when the availability status changes.
 , week_grouping AS (
     SELECT
-        *,
-        SUM(has_date_gap_flag) OVER (
+        *
+        , SUM(has_date_gap_flag) OVER (
             PARTITION BY distribution_center, product_id ORDER BY report_week
-        ) AS week_grp,
-        SUM(has_different_status_flag) OVER (
+        ) AS week_grp
+        , SUM(has_different_status_flag) OVER (
             PARTITION BY distribution_center, product_id ORDER BY report_week
         ) AS availability_status_grp
     FROM window_weeks
@@ -104,8 +104,8 @@ CENT001               441562      2024-06-24                   In Stock        1
 -- report week. If the status changes or if a week is skipped, the row count starts again at 1.
 , final AS (
     SELECT
-        *,
-        ROW_NUMBER() OVER (
+        *
+        , ROW_NUMBER() OVER (
             PARTITION BY distribution_center, product_id, availability_status_grp, week_grp 
             ORDER BY report_week
         ) AS consecutive_weeks_in_status
