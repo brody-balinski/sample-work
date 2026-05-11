@@ -278,13 +278,13 @@ WITH stg_medication_requests AS (
         , j.tracking_number
         , j.shipment_carrier
         , j.<pharmacy_censored>_shipment_date
-        , CASE WHEN j.pharmacy_name = 'Everwell'
+        , CASE WHEN j.pharmacy_name = '<censored>'
             THEN j.admin_shipment_date END
         AS family_everwell_shipment_date
-        , CASE WHEN j.pharmacy_name = 'TailorMade'
+        , CASE WHEN j.pharmacy_name = '<censored>'
             THEN j.admin_shipment_date END
         AS tailormade_shipment_date
-        , CASE WHEN j.pharmacy_name = 'Precision'
+        , CASE WHEN j.pharmacy_name = '<censored>'
             THEN j.admin_shipment_date END
         AS precision_shipment_date
         , j.admin_shipment_date
