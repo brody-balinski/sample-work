@@ -35,7 +35,7 @@ This repository contains SQL scripts designed to address various analytical and 
 
 ## Medical
 ### python
-### 1. medication_request_ingestion
+### 1. ingestion_medication_requests
    #### &nbsp;&nbsp;&nbsp;&nbsp;Description:
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Orchestrates the ingestion of medication request data from an API, using an incrementality strategy<br>
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;based on when the record was last updated in the API.
